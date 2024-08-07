@@ -9,7 +9,10 @@ const ProductCards = () => {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "center",
+          justifyContent: {
+            xs: "center",
+            sm: "flex-start",
+          },
           gap: 2,
         }}
       >

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button, Container } from "@mui/material";
+import { Box, Typography, Button, Container, Divider } from "@mui/material";
 import ProductCards from "./ProductCards";
 const Products = () => {
   return (
@@ -29,6 +29,7 @@ const Products = () => {
         </Button>
       </Box>
       <ProductCards />
+      <Divider />
     </Container>
   );
 };

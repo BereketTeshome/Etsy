@@ -1,18 +1,29 @@
 import { Box, Typography, Button, Container, IconButton } from "@mui/material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import React from "react";
+import React, { useEffect } from "react";
 import Rating from "@mui/material/Rating";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Header = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const fullText =
     "Football Field Pencil Case, Soccer Field Zipper Pouch, Kid's Pencil Case, Back to School, Sport Lover Gift, Student Gift Idea, Gift For Kids";
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <Container maxWidth sx={{ marginTop: 2, marginBottom: 2 }}>
       <Box sx={{ display: "flex", gap: { xs: 1, md: 4 }, marginBottom: 2 }}>
-        <Box sx={{ position: "relative" }}>
+        <Box
+          sx={{ position: "relative" }}
+          className="animation"
+          data-aos="slide-right"
+        >
           <Box
             component="img"
             sx={{
@@ -41,7 +52,11 @@ const Header = () => {
             </IconButton>
           </Box>
         </Box>
-        <Box sx={{ maxWidth: 800 }}>
+        <Box
+          sx={{ maxWidth: 800 }}
+          className="animation"
+          data-aos="slide-left"
+        >
           <Box>
             <Typography
               sx={{
