@@ -33,7 +33,10 @@ const ProductCards = () => {
                   boxShadow: 3,
                   transform: "scale(1.05)",
                 },
-                width: 162,
+                width: {
+                  xs: 160,
+                  sm: 200,
+                },
               }}
             >
               <Box
